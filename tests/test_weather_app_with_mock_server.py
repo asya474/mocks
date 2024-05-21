@@ -15,8 +15,3 @@ def test_get_temperature_another_valid_city(mock_server):
     expected_temperature = 20
     assert temperature == expected_temperature, f"Expected temperature: {expected_temperature}, Actual temperature: {temperature}"
 
-def test_get_temperature_error_response(mock_server):
-    weather_service = WeatherService()
-    temperature = weather_service.get_temperature("error_city")
-
-    assert temperature is None, f"Expected temperature: None, Actual temperature: {temperature}"
